@@ -21,7 +21,7 @@
 #include <fstream>
 #include <vector>
 #include <omp.h>
-#include <opencv2/opencv.hpp>
+#include <opencv4/opencv2/opencv.hpp>
 #include "nvdsinfer_custom_impl.h"
 
 
