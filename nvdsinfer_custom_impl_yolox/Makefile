@@ -24,7 +24,7 @@ NVCC:=/usr/local/cuda-$(CUDA_VER)/bin/nvcc
 
 CFLAGS:= -Wall -std=c++11 -shared -fPIC -Wno-error=deprecated-declarations
 CFLAGS+= -I../../includes -I/usr/local/cuda-$(CUDA_VER)/include -I/home/nvidia/data/zhangbo/library/opencv-4.5.1/include/opencv4 -I/usr/lib/gcc/x86_64-linux-gnu/7/include/ 
-CXXFLAGS:= -fopenmp
+CXXFLAGS:= -fopenmp -I/usr/include/opencv4
 
 LIBS:= -lnvinfer_plugin -lnvinfer -lnvparsers -L/usr/local/cuda-$(CUDA_VER)/lib64 -lcudart -lcublas -lstdc++fs -L/home/nvidia/data/zhangbo/library/opencv-4.5.1/lib -lopencv_core
 LFLAGS:= -shared -Wl,--start-group $(LIBS) -Wl,--end-group -fopenmp
